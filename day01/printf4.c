@@ -2,10 +2,10 @@
 
 int main()
 {
-	printf("¹®ÀÚ a: %c\n", 'a');
-	printf("¹®ÀÚ a: %d\n", 'a');
-	printf("¹®ÀÚ A: %c\n", 'A');
-	printf("¹®ÀÚ A: %d\n", 'A');
+	printf("ë¬¸ì a: %c\n", 'a');
+	printf("ë¬¸ì a: %d\n", 'a');
+	printf("ë¬¸ì A: %c\n", 'A');
+	printf("ë¬¸ì A: %d\n", 'A');
 
 	return 0;
 
