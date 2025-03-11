@@ -1,4 +1,4 @@
-/* »ó¼ö */
+/* ìƒìˆ˜ */
 #include <stdio.h>
 
 int main()
@@ -12,7 +12,7 @@ int main()
 	*dp = 4.0;
 	
 
-	printf("¿øµÑ·¹: %.2lf\n", cf);
+	printf("ì›ë‘˜ë ˆ: %.2lf\n", cf);
 	printf("pi: %.2lf", pi);
 
 	return 0;
