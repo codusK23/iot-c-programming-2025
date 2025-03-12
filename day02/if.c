@@ -5,10 +5,10 @@ int main()
 	int num = 10;
 
 	if (num > 10 || num < 10) {
-		printf("ÂüÀÔ´Ï´Ù.");
+		printf("ì°¸ì…ë‹ˆë‹¤.");
 	}
 	else {
-		printf("°ÅÁşÀÔ´Ï´Ù.");
+		printf("ê±°ì§“ì…ë‹ˆë‹¤.");
 	}
 
 	return 0;
