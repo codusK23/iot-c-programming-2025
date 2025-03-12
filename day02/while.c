@@ -3,7 +3,7 @@
 int main() {
 	int i = 0;
 	while (i < 5) {
-		printf("¾È³çÇÏ¼¼¿ä. %d\n", i+1);
+		printf("ì•ˆë…•í•˜ì„¸ìš”. %d\n", i+1);
 		i++;
 	}
 
@@ -15,6 +15,6 @@ int main() {
 		a++;
 	}
 
-	printf("1~100ÀÇ ÇÕÀº %d", sum);
+	printf("1~100ì˜ í•©ì€ %d", sum);
 	return 0;
 }
