@@ -4,8 +4,8 @@ int main()
 {
 	int num = 10;
 	if (num == 10) {
-		printf("ºù°í\n");
+		printf("ë¹™ê³ \n");
 	}
-	else if(1) printf("ºù°í¾Æ´Ô\n");
+	else if(1) printf("ë¹™ê³ ì•„ë‹˜\n");
 	return 0;
 }
