@@ -7,10 +7,10 @@ int main()
 	int a = 10;
 	int b = 20;
 
-	printf("È£Ãâ Àü a: %d, b: %d", a, b);
+	printf("í˜¸ì¶œ ì „ a: %d, b: %d", a, b);
 	
 	swap(&a, &b);
-	printf("È£Ãâ ÈÄ a: %d, b: %d", a, b);
+	printf("í˜¸ì¶œ í›„ a: %d, b: %d", a, b);
 	return 0;
 }
 
