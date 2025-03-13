@@ -4,11 +4,11 @@ int main()
 {
 	int a = 10;
 	int b = 20;
-	printf("º¯°æ Àü a: %d, b: %d\n", a, b);
+	printf("ë³€ê²½ ì „ a: %d, b: %d\n", a, b);
 
 	int temp = a;
 	a = b;
 	b = temp;
-	printf("º¯°æ ÈÄ a: %d, b: %d\n", a, b);
+	printf("ë³€ê²½ í›„ a: %d, b: %d\n", a, b);
 	return 0;
 }
