@@ -25,7 +25,7 @@ void printAry(int* p_ary, int _size) {
 
 void inputAry(int* p_ary, int _size) {
 	for (int i = 0; i < _size; i++) {
-		printf("array[%d]°ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä: ", i);
+		printf("array[%d]ê°’ì„ ìž…ë ¥í•´ì£¼ì„¸ìš”: ", i);
 		scanf_s("%d", (p_ary + i));
 		//printf("array[%d]: %d\n", i, *(p_ary + i));
 	}
