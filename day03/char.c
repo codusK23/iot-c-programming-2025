@@ -1,5 +1,5 @@
 /*
-	¹®ÀÚ
+	ë¬¸ì
 */
 # define _CRT_SECURT_NO_WARNINGS
 # include <stdio.h>
