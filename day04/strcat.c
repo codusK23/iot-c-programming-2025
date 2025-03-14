@@ -1,5 +1,5 @@
 /*
-	strcat - ¹®ÀÚ¿­À» ºÙÀÌ´Â ÇÔ¼ö
+	strcat - ë¬¸ìžì—´ì„ ë¶™ì´ëŠ” í•¨ìˆ˜
 */
 #include <stdio.h>
 
