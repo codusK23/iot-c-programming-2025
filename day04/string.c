@@ -1,5 +1,5 @@
 /*
-	¹®ÀÚ¿­
+	ë¬¸ìì—´
 */
 
 #include <stdio.h>
@@ -11,7 +11,7 @@ int main()
 
 	printf("%s\n", str);
 	printf("%s\n", "orange");
-	printf("%u\n", "orange");  // µ¥ÀÌÅÍ ¿µ¿ª ÁÖ¼Ò
+	printf("%u\n", "orange");  // ë°ì´í„° ì˜ì—­ ì£¼ì†Œ
 	printf("%c\n", *"orange");
 	printf("%c\n", *("orange"+1));
 	printf("%c\n", "orange"[2]);
