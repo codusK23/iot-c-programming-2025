@@ -1,5 +1,5 @@
 /*
-	2차원 char 배열
+	2李⑥썝 char 諛곗뿴
 */
 #define _CRT_SECURE_NO_WARNINGS
 
