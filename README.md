@@ -81,11 +81,11 @@ IoT 개발자 심화 프로그래밍 언어 리포지토리
     - 삼항연산자 : (조건 ? 참 : 거짓)
     - 연산자 우선순위 : 산술 -> 비교 -> 비트 -> 논리 -> 대입
 
-- 조건문
+- 선택 제어문
     - if, if-else, if-else if-else : if(조건식) {...}
     - switch-case : switch(변수){case 값1:... case 값2:... default:...}
         - break 없으면 끝까지 실행, break있으면 switch문 종료
-- 반복문
+- 반복 제어문
     - for (초기값; 조건식; 증감식;){...}
     - while (조건식) {...} : break(반복문 종료), continue(다음 반복 진행)
 
@@ -120,10 +120,35 @@ IoT 개발자 심화 프로그래밍 언어 리포지토리
         - int* **const** 포인터변수 = &변수 : 포인터 상수, 포인터 변수가 가리키는 주소의 값 변경을 불허함
 - 문자 전용 함수
     - 문자 하나를 입력받고 출력하기에 번거로움: getchar, putchar 사용
-    - getchar() : 한 문자를 읽어오는 함수 (입력)
+    - getchar() : 한 문자를 읽어오는 함수 (입력) [C](./day04/char4.c)
     - putchar() : 한 문자를 출력하는 함수 (출력)
         - 줄바꿈이 안 되는 단점이 있음 따로 putchar('\n') 추가
 
 
 ## 4일차
+- 주소
+    - 데이터영역 주소
+        - 힙 : 사용자에게 할당된 메모리 영역
+        - stack : 지역변수, 매개변수
+        - data: 전역변수 , static
+        - rod: 문자열 상수, 리터럴
+    - 코드영역 주소
+        - 함수, 제어문
+- 문자열 전용 함수
+    - gets : 저장공간만 전달 ex) gets(str)
+    - fgets : 저장공간, 저장할 공간 사이즈, 표준입력버퍼(키보드 입력) 전달 ex) fgets(str, sizeof(str), stdin)
+    - puts : 자동개행, 저장공간 전달 ex) puts(str)
+    - fputs : 자동개행 안 됨, 저장공간, 표준 출력버퍼(스트림) 전달 ex)fputs(str, stdout)
+    - strcpy : 문자열 복사 함수 ex) strcpy(복사, 원본)
+    - strncpy : 시작주소부터 복사할 문자 갯수를 설정할 수 있다. ex) strncpy(str, "abcd", 3)
+    - strcmp : 문자열 비교 함수, str 먼저 나오면 -1 반환, str2 먼저 나오면 1 반환, 같으면 0 반환
+    - strncmp : 시작주소부터 비교할 문자 갯수를 설정할 수 있다. ex) strncmp(str, str2, 3)
+    - strcat : 문자열 붙이는 함수 ex) strcat(str, "banana")
+    - strncat : 문자열 붙이는 갯수 설정 가능 ex) strcat(str, "banana", 3)
+    - strlen : 문자열 길이 계산 ex) strlen(str)
 
+    
+
+- 전역변수: 프로그램 전체
+- 지역변수: 블록안에서만 사용 매개변수 자동변수
+- 정적변수: 전역+ 지역
