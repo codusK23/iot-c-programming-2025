@@ -54,7 +54,7 @@ IoT 개발자 심화 프로그래밍 언어 리포지토리
     - 지역변수 : 특정함수 내에서만 사용가능
     - signed : 부호 있는 값, 양수와 음수 모두 저장 : -128 ~ 127
     - unsigned : 부호 없는 값, 양수만 저장 : 0 ~ 255
-    - signed, unsigned : int, char, short, long 등의 정수형 자료형에 적용할 수 있다.
+    - signed, unsigned : int, char, short, long 등의 정수형 자료형에 적용.
 
 - 상수
     - 변하지 않는 고정된 값
@@ -85,6 +85,7 @@ IoT 개발자 심화 프로그래밍 언어 리포지토리
     - if, if-else, if-else if-else : if(조건식) {...}
     - switch-case : switch(변수){case 값1:... case 값2:... default:...}
         - break 없으면 끝까지 실행, break있으면 switch문 종료
+
 - 반복 제어문
     - for (초기값; 조건식; 증감식;){...}
     - while (조건식) {...} : break(반복문 종료), continue(다음 반복 진행)
@@ -104,6 +105,7 @@ IoT 개발자 심화 프로그래밍 언어 리포지토리
     - 선언 및 초기화 방법: 자료형 배열이름[배열크기] = {...} (배열크기 생략가능)
     - 장점: 순회, 탐색 좋음, 단점: 수정이 어려움 -> 인덱스 사용(값에 접근하기)
     - 문자형 배열의 경우 문자형 배열의 끝을 알리는 null이 저장될 수 있게 (입력할 값 갯수 + 1)을 배열 크기로 지정
+
 - 포인터
     - 메모리 주소를 저장할 수 있는 공간
     - 선언 방법: 자료형* 포인터변수이름; 
@@ -118,6 +120,7 @@ IoT 개발자 심화 프로그래밍 언어 리포지토리
     - 포인터 상수: const
         - **const** int* 포인터변수 = &변수 : 데이터 상수, 포인터 변수를 통한 데이터의 값 변경을 불허함
         - int* **const** 포인터변수 = &변수 : 포인터 상수, 포인터 변수가 가리키는 주소의 값 변경을 불허함
+
 - 문자 전용 함수
     - 문자 하나를 입력받고 출력하기에 번거로움: getchar, putchar 사용
     - getchar() : 한 문자를 읽어오는 함수 (입력) [C](./day04/char4.c)
@@ -134,21 +137,49 @@ IoT 개발자 심화 프로그래밍 언어 리포지토리
         - rod: 문자열 상수, 리터럴
     - 코드영역 주소
         - 함수, 제어문
+
 - 문자열 전용 함수
-    - gets : 저장공간만 전달 ex) gets(str)
-    - fgets : 저장공간, 저장할 공간 사이즈, 표준입력버퍼(키보드 입력) 전달 ex) fgets(str, sizeof(str), stdin)
-    - puts : 자동개행, 저장공간 전달 ex) puts(str)
-    - fputs : 자동개행 안 됨, 저장공간, 표준 출력버퍼(스트림) 전달 ex)fputs(str, stdout)
-    - strcpy : 문자열 복사 함수 ex) strcpy(복사, 원본)
-    - strncpy : 시작주소부터 복사할 문자 갯수를 설정할 수 있다. ex) strncpy(str, "abcd", 3)
-    - strcmp : 문자열 비교 함수, str 먼저 나오면 -1 반환, str2 먼저 나오면 1 반환, 같으면 0 반환
-    - strncmp : 시작주소부터 비교할 문자 갯수를 설정할 수 있다. ex) strncmp(str, str2, 3)
-    - strcat : 문자열 붙이는 함수 ex) strcat(str, "banana")
-    - strncat : 문자열 붙이는 갯수 설정 가능 ex) strcat(str, "banana", 3)
-    - strlen : 문자열 길이 계산 ex) strlen(str)
+    - gets, fgets : 문자열 입력 함수
+    - puts, fputs : 문자열 출력 함수
+    - strcpy, strncpy : 문자열 복사 함수
+    - strcmp, strncmp : 문자열 비교 함수
+    - strcat, strncat : 문자열 연결 함수
+    - strlen : 문자열 길이 계산함수
 
-    
+- 변수
+    - 전역변수: 프로그램 전체
+    - 지역변수: 블록안에서만 사용(매개변수, 자동변수)
+    - 정적변수: 전역+ 지역
 
-- 전역변수: 프로그램 전체
-- 지역변수: 블록안에서만 사용 매개변수 자동변수
-- 정적변수: 전역+ 지역
+
+## 5일차
+- 포인터 배열 : 포인터를 저장하고 있는 배열 ex) int* arr[5]; -> 포인터 5개 저장하는 배열
+
+- 배열 포인터 : 배열의 시작 주소를 저장하는 포인터 ex) int (*arr)[5]; -> 원소가 5개인 배열의 포인터
+
+- 함수 포인터 : 반환 자료형 (*포인터 이름)(매개변수 타입); ex) int (*func)(int, int);
+    - [C](./day05/voidpointer.c): 수정
+
+- malloc - free : 메모리 동적 할당 및 해제, 힙영역에 입력크기만큼 메모리 공간을 할당받고 시작 주소 리턴.
+    - 정수 배열 동적 할당 : int* arr = (int*)malloc(sizeof(int) * n)
+    - 문자열 동적 할당 : char* str = (char*)malloc(strlen(input) + 1)
+
+- 구조체 : 사용자 정의 자료형, 기존 자료형을 묶어서 만든 복합 자료형(타입)
+    - 선언
+        ```c
+        struct Human			
+        {
+            char name[100];	
+            int age;
+        };
+        ```
+    - 사용 : (.)멤버 접근 연산자
+        ```c
+        struct Human h;		
+        h.age = 30;		
+        ```
+    - typedef : 별칭 설정
+    - 구조체 포인터
+        - . : 구조체 변수를 통해서 멤버에 접근하는 방법
+        - -> : 구조체 포인터를 통해서 멤버에 접근하는 방법
+    - 참고 : [C](./day05/struct5.c)
