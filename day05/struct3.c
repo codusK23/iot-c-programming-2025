@@ -20,8 +20,8 @@ int main() {
 	s.pf.height = 160;
 	s.pf.weight = 40;
 
-	printf("Å°: %.1lf\n", s.pf.height);
-	printf("¸ö¹«°Ô: %.1lf\n", s.pf.weight);
+	printf("í‚¤: %.1lf\n", s.pf.height);
+	printf("ëª¸ë¬´ê²Œ: %.1lf\n", s.pf.weight);
 
 	return 0;
 }
