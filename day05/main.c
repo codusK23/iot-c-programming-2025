@@ -3,9 +3,9 @@
 int main(int argc, char* argv[])
 {
 	int i = 0;
-	printf("Àü´Þ°¹¼ö: %d\n", argc);
+	printf("ì „ë‹¬ê°¯ìˆ˜: %d\n", argc);
 	for (i = 0; i < argc; i++) {
-		//printf("Àü´Þ °ª: %s", argv[i]);
+		//printf("ì „ë‹¬ ê°’: %s", argv[i]);
 	}
 	return 0;
 }
