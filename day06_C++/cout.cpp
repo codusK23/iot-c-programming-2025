@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
 	int num = 100;
-	char str[100] = "È«±æµ¿";
+	char str[100] = "홍길동";
 	double d = 3.14;
 
 	std::cout << "abcdefg";
