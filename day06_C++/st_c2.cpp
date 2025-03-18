@@ -1,5 +1,5 @@
 /*
-	C++ ±¸Á¶Ã¼
+	C++ êµ¬ì¡°ì²´
 */
 #include <iostream>
 
@@ -14,7 +14,7 @@ typedef struct human {
 } Human;
 
 int main() {
-	Human h = { "±èÃ¶¼ö", 30, "¹é¼ö" };
+	Human h = { "ê¹€ì² ìˆ˜", 30, "ë°±ìˆ˜" };
 	h.showHuman();
 
 	return 0;
