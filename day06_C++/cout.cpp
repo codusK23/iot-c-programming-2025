@@ -5,13 +5,13 @@ using namespace std;
 
 int main() {
 	int num = 100;
-	char str[100] = "È«±æµ¿";
+	char str[100] = "ÃˆÂ«Â±Ã¦ÂµÂ¿";
 	double d = 3.14;
 
 	std::cout << "abcdefg";
 	std::cout << num << std::endl;
 	std::cout << str << std::endl;
-	cout << d << endl;			// endl : °³ÇàÀÇ¹Ì
+	cout << d << endl;			// endl : ê°œí–‰ì˜ë¯¸
 
 	return 0;
 
