@@ -158,7 +158,7 @@ IoT 개발자 심화 프로그래밍 언어(C/C++) 리포지토리
 - 배열 포인터 : 배열의 시작 주소를 저장하는 포인터 ex) int (*arr)[5]; -> 원소가 5개인 배열의 포인터
 
 - 함수 포인터 : 반환 자료형 (*포인터 이름)(매개변수 타입); ex) int (*func)(int, int);
-    - [C](./day05/voidpointer.c): 수정
+    - [C](./day05/voidpointer.c)
 
 - malloc - free : 메모리 동적 할당 및 해제, 힙영역에 입력크기만큼 메모리 공간을 할당받고 시작 주소 리턴.
     - 정수 배열 동적 할당 : int* arr = (int*)malloc(sizeof(int) * n)
