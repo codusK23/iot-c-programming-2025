@@ -14,7 +14,7 @@ public:
 		n2 = b;
 	}
 	void getData(){
-		std::cout << "³ª´Â AClsssÀÇ ÀÎ½ºÅÏ½ºÀÔ´Ï´Ù." << std::endl;
+		std::cout << "ë‚˜ëŠ” AClsssì˜ ì¸ìŠ¤í„´ìŠ¤ì…ë‹ˆë‹¤." << std::endl;
 		std::cout << "n1: " << n1 << ", n2: " << n2 << std::endl;
 	}
 };
