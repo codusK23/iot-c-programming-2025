@@ -13,7 +13,7 @@ private:
 public:
 	void setData(int i_id, const char* i_name, int i_age) {
 		id = i_id;
-		strcpy(name, i_name);		// ÁÖ¼Ò = rvalue
+		strcpy(name, i_name);		// ì£¼ì†Œ = rvalue
 		age = i_age;
 	}
 
@@ -25,7 +25,7 @@ public:
 int main() {
 
 	MyClass obj;
-	obj.setData(1, "±èÃ¶¼ö", 20);
+	obj.setData(1, "ê¹€ì² ìˆ˜", 20);
 	obj.getData();
 
 	return 0;
