@@ -1,6 +1,6 @@
 #include <iostream>
 
-#define ADD(a, b)	#a "+" #b		// ¸ÅÅ©·Î ÇÔ¼ö
+#define ADD(a, b)	#a "+" #b		// ë§¤í¬ë¡œ í•¨ìˆ˜
 #define PI			3.14
 #define MSG(x, y, z)	x ## y ## z
 
