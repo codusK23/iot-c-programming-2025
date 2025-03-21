@@ -9,7 +9,7 @@ class CTest {
 private:
 	T ary[sz];
 public:
-	T& operator[](int idx) {					// 쓰기 가능 인덱스
+	T& operator[](int idx) {					// 쓰기 가능 인덱스 
 		if (idx < 0 || idx >= sz) {
 			std::cout << "Error" << std::endl;
 			exit(1);
