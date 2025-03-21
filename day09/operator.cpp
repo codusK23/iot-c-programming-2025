@@ -17,7 +17,7 @@ public:
 
 int main() {
 	/*
-	MyClass obj{ 1, 2, "ȫ�浿" };
+	MyClass obj{ 1, 2, "홍길동" };
 	obj.showMyClass();
 
 	MyClass obj2;
