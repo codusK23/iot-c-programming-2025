@@ -306,3 +306,18 @@ IoT 개발자 심화 프로그래밍 언어(C/C++) 리포지토리
 
 
 ## 11일차
+- casting
+    - static_cast
+    - dynamic_cast
+    - const_cast
+
+- 스마트 포인터
+    - unique
+    - shared
+    - weak
+
+- STL(Standard Template Library)
+    - container : 객체를 저장하고 관리하는 자료구조
+        - 시퀀스 컨테이너 : 선형적으로 데이터 저장(순서)
+        - 연관 컨테이너 : 일정한 규칙으로 저장
+        - 컨테이너 어댑터 : 변형
