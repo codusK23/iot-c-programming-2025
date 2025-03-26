@@ -5,16 +5,17 @@ using namespace std;
 using namespace sql;
 
 int main() {
+
+	const string server = "tcp://127.0.0.1:3306";
+	const string username = "root";
+	const string password = "12345";
+	const string database = "testDB";
+
 	try {
-		mysql::MySQL_Driver* driver;
-		Connection* con;
+		mysql::MySQL_Driver* driver = mysql::get_mysql_driver_instance();;
+		unique_ptr<Connection> conn (driver->connect(server, username, password));
 
-		driver = mysql::get_mysql_driver_instance();
-
-		con = driver->connect("tcp://127.0.0.1:3306", "madang", "12345");
-
-		con->setSchema("madang");
-
+		conn->setSchema(database);
 		cout << "Connection successful!" << endl;
 	}
 	catch (SQLException& e) {

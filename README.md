@@ -321,3 +321,17 @@ IoT 개발자 심화 프로그래밍 언어(C/C++) 리포지토리
         - 시퀀스 컨테이너 : 선형적으로 데이터 저장(순서)
         - 연관 컨테이너 : 일정한 규칙으로 저장
         - 컨테이너 어댑터 : 변형
+
+## 12일차
+- 비쥬얼 스튜디오 데이터베이스 연결 방법
+    - mysql c++ 커넥션 설치
+    - mysql workbench : mysql connection established 오류 발생
+        - 포트 잠김으로 인한 문제
+        - NAT 서비스가 해당 포트를 다른 프로세스와 잘못 매핑하거나, 패킷을 잘못 처리할 경우 등의 문제
+            - nat 서비스 종료 후 재실행
+            - cmd 관리자 모드 실행
+                - new stop winnat
+                - new start winnat
+
+- miniproject
+    - 계획 수립, 역할 지정
