@@ -278,7 +278,24 @@ IoT 개발자 심화 프로그래밍 언어(C/C++) 리포지토리
     - 전역함수 오버로딩
         - inline : public
         - friend : private, protected
-- 템플릿
+          
+- 템플릿 함수
+  - 정의와 선언 분리 불가
+  - 템플릿 일반화와 특수화 : 템플릿 일반화 중 특별한 타입을 처리할 경우
+      - ```c++
+        template <typename T>        // 템플릿 선언(일반화)
+        T Add(T a, T b) {
+	        return a + b;
+        }
+
+    
+        template <>					// 템플릿 선언(특수화)
+        int func<int>(int a, int b) {
+	        std::cout << "type: <int>" << std::endl;
+	        return a + b;
+        }
+        ```
+  - 클래스 템플릿 : [C++](./day09/template4.cpp), [C++](./day09/template5.cpp)
 
 
 ## 10일차
@@ -301,26 +318,32 @@ IoT 개발자 심화 프로그래밍 언어(C/C++) 리포지토리
     - downcasting : 자식 타입의 포인터로 부모 객체를 가리킬 수 없다.
 
 - virtual
-    - virtual function : 
-    - virtual class :
+    - virtual function : 자식클래스에서 재정의(오버라이딩)할 것을 약속받은 멤버함수
+        - virtual table이 만들어지고 dynamic binding으로 동작
+    - virtual class : 순수 가상 함수를 가지는 클래스
+        - 순수 가상 함수 : 순수 지정자를 가지는 메서드
+    - virtual 소멸자 : 동적 할당된 객체 참조 후 메모리 해제 시 참조 타입의 소멸자만 호출 -> 메모리 누수 발생, 자식클래스 소멸자 호출 유도
 
 
 ## 11일차
 - casting
-    - static_cast
-    - dynamic_cast
-    - const_cast
+    - static_cast : 타입변환을 수행하는 안전한 캐스팅
+    - dynamic_cast : 상속관계에서 안전하게 형변환 하는 캐스팅, 다운캐스팅할 때 꼭 virtual 키워드 사용
+    - const_cast : const 제거를 수행하는 포인터
+    - reinterpret_cast : 포인터->포인터, 포인터->변수, 변수->포인터로 하는 주로 포인터 관련 캐스팅.
 
 - 스마트 포인터
-    - unique
-    - shared
-    - weak
+    - unique : 단일 소유권을 가지며 독점적으로 관리하는 스마트 포인터
+      - 스마트 포인터: 객체의 생명주기를 객체에 맡김으로 프로그래머의 메모리 관리 부담을 줄여줌
+    - shared : 참조 카운트를 통해 객체의 소유권 공유
+      - 순환참조 : 상호 참조로 인해 메모리가 해제되지 않는 문제
+    - weak : 순환참조 방지, 참조 카운트에 영향을 주지 않는 스마트 포인터 
 
 - STL(Standard Template Library)
     - container : 객체를 저장하고 관리하는 자료구조
         - 시퀀스 컨테이너 : 선형적으로 데이터 저장(순서)
-        - 연관 컨테이너 : 일정한 규칙으로 저장
-        - 컨테이너 어댑터 : 변형
+        - 연관 컨테이너 : 일정한 규칙으로 저장 (key-value)
+        - 컨테이너 어댑터 : 기존 컨테이너 변형
 
 ## 12일차
 - 비쥬얼 스튜디오 데이터베이스 연결 방법
